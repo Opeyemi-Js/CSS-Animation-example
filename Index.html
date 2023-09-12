@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Css Animation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html{
+      font-size: 62.5%;
+    }
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      font-family: 'Poppins', sans-serif;
+    }
+    .container{
+      margin-top: 15rem;
+      color: black;
+      width: 37.5rem;
+      max-height: auto;
+      background-color: white;
+      border-radius: 1rem;
+      animation:slidedown 4s linear, bounce 5s 3.5s;
+      position: relative;
+    }
+    form{
+      text-align: center;
+    }
+    h1{
+      font-size: 2.2rem;
+      font-weight: 700;
+      padding: 1rem 0;
+      border-bottom: 0.1rem solid grey;
+    }
+    p{
+      font-size:1.5rem ;
+      margin: 2rem .5rem;
+      font-weight:300;
+    }
+    .email-field input{
+      width: 85%;
+      height: 3rem;
+      outline: none;
+      border-radius: .5rem;
+      border: .2rem solid grey;
+      padding-left: 2rem;
+      font-size: 2rem;
+    }
+    .btn button{
+      margin: 2rem 0;
+      width: 10rem;
+      height: 3rem;
+      outline: none;
+      border: none;
+      border-radius: .5rem ;
+      background-color: salmon;
+    }
+    /* Keyframes Animation */
+    @Keyframes slidedown{
+      from{top:-400px;}
+      to{ top:80px;}
+    }
+    @Keyframes bounce{
+      0%{top:50px;}
+      50%{top:0px;}
+      100%{top:10px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <h1>Subscribe to Our Newsletter Today!</h1>
+      <p>Enter your email below to get latest update from us.</p>
+      <div class="email-field">
+      <input type="email" required placeholder="@abc.com">
+     </div>
+     <div class="btn">
+      <button type="submit">Subscribe Now</button>
+     </div>
+    </form>
+  </div>
+</body>
+</html>
